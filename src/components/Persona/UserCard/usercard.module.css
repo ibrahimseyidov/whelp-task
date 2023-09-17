@@ -1,0 +1,86 @@
+.user-card-container {
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 340px;
+    cursor: pointer;
+}
+
+.user-card-container:hover {
+    opacity: 0.8
+}
+
+.user-card-image :nth-child(1) {
+    width: 250px;
+    height: 250px;
+    background: #F8DAC0;
+    border-radius: 4px;
+}
+
+.user-card-image :nth-child(1):hover {
+    opacity: 0.8
+}
+
+.user-card-bot {
+    position: absolute;
+    width: 100%;
+    padding: 14px;
+    background-color: #fff;
+    border-radius: 0 0px 4px 4px;
+    bottom: 0px;
+}
+
+.user-card-head {
+    margin-bottom: 10px;
+}
+
+.user-card-head :nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.edit-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-btn {
+    background-color: #DF5904;
+    border: none;
+    outline: none;
+    color: #ffefef;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.4s all ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.trash-btn {
+    background: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0 20px;
+    transition: 0.4s all ease;
+}
+
+.trash-btn:hover {
+    background: rgba(255, 239, 239, 1);
+}
+
+.trash-btn:active {
+    background: rgba(255, 239, 239, 0);
+    border-radius: 12px;
+}
+
+.trash-btn :nth-child(1) {
+    width: 18px;
+    height: 22px;
+}

@@ -1,0 +1,481 @@
+.user-modal-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 545px;
+    height: 530px;
+    color: #000;
+    border: 3px solid #000;
+    padding: 40px;
+    cursor: auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.user-modal-head {
+    margin-bottom: 26px;
+}
+
+.user-modal-head :nth-child(1) {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.user-modal-head :nth-child(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.user-input-area :nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s all ease;
+}
+
+.user-input-area :nth-child(1) label {
+    margin-bottom: 12px;
+}
+
+.pure-material-textfield-outlined {
+    --pure-material-safari-helper1: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    position: relative;
+    display: inline-block;
+    padding-top: 6px;
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Input, Textarea */
+.pure-material-textfield-outlined>input,
+.pure-material-textfield-outlined>textarea {
+    box-sizing: border-box;
+    margin: 0;
+    border: solid 1px;
+    border-color: rgba(193, 112, 116, 1);
+    border-top-color: transparent;
+    border-radius: 4px;
+    padding: 15px 13px 15px;
+    width: 100%;
+    height: inherit;
+    background-color: transparent;
+    box-shadow: none;
+    /* Firefox */
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    caret-color: #C17074 !important;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+/* Span */
+.pure-material-textfield-outlined>input+span,
+.pure-material-textfield-outlined>textarea+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    font-size: 75%;
+    line-height: 15px;
+    cursor: text;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+/* Corners */
+.pure-material-textfield-outlined>input+span::before,
+.pure-material-textfield-outlined>input+span::after,
+.pure-material-textfield-outlined>textarea+span::before,
+.pure-material-textfield-outlined>textarea+span::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border-top: solid 1px;
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 1px transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pure-material-textfield-outlined>input+span::before,
+.pure-material-textfield-outlined>textarea+span::before {
+    margin-right: 4px;
+    border-left: solid 1px transparent;
+    border-radius: 4px 0;
+}
+
+.pure-material-textfield-outlined>input+span::after,
+.pure-material-textfield-outlined>textarea+span::after {
+    flex-grow: 1;
+    margin-left: 4px;
+    border-right: solid 1px transparent;
+    border-radius: 0 4px;
+}
+
+/* Hover */
+.pure-material-textfield-outlined:hover>input,
+.pure-material-textfield-outlined:hover>textarea {
+    border-color: rgba(193, 112, 116, 1);
+    border-top-color: transparent;
+}
+
+.pure-material-textfield-outlined:hover>input+span::before,
+.pure-material-textfield-outlined:hover>textarea+span::before,
+.pure-material-textfield-outlined:hover>input+span::after,
+.pure-material-textfield-outlined:hover>textarea+span::after {
+    border-top-color: rgba(193, 112, 116, 1);
+}
+
+.pure-material-textfield-outlined:hover>input:not(:focus):placeholder-shown,
+.pure-material-textfield-outlined:hover>textarea:not(:focus):placeholder-shown {
+    border-color: rgba(193, 112, 116, 1);
+}
+
+/* Placeholder-shown */
+.pure-material-textfield-outlined>input:not(:focus):placeholder-shown,
+.pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown {
+    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-top-color: rgba(193, 112, 116, 1);
+}
+
+.pure-material-textfield-outlined>input:not(:focus):placeholder-shown+span,
+.pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown+span {
+    font-size: inherit;
+    line-height: 68px;
+}
+
+.pure-material-textfield-outlined>input:not(:focus):placeholder-shown+span::before,
+.pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown+span::before,
+.pure-material-textfield-outlined>input:not(:focus):placeholder-shown+span::after,
+.pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown+span::after {
+    border: rgba(193, 112, 116, 1);
+}
+
+/* Focus */
+.pure-material-textfield-outlined>input:focus,
+.pure-material-textfield-outlined>textarea:focus {
+    border-color: rgba(193, 112, 116, 1);
+    border-top-color: transparent;
+    box-shadow: inset 1px 0 rgba(193, 112, 116, 1), inset -1px 0 rgba(193, 112, 116, 1), inset 0 -1px rgba(193, 112, 116, 1);
+    outline: none;
+}
+
+.pure-material-textfield-outlined>input:focus+span,
+.pure-material-textfield-outlined>textarea:focus+span {
+    color: rgba(193, 112, 116, 1);
+}
+
+.pure-material-textfield-outlined>input:focus+span::before,
+.pure-material-textfield-outlined>input:focus+span::after,
+.pure-material-textfield-outlined>textarea:focus+span::before,
+.pure-material-textfield-outlined>textarea:focus+span::after {
+    border-top-color: rgba(193, 112, 116, 1) !important;
+    box-shadow: inset 0 1px rgba(193, 112, 116, 1);
+}
+
+/* Disabled */
+.pure-material-textfield-outlined>input:disabled,
+.pure-material-textfield-outlined>input:disabled+span,
+.pure-material-textfield-outlined>textarea:disabled,
+.pure-material-textfield-outlined>textarea:disabled+span {
+    border-color: rgba(193, 112, 116, 1) !important;
+    border-top-color: transparent !important;
+    color: rgba(193, 112, 116, 1);
+    pointer-events: none;
+}
+
+.pure-material-textfield-outlined>input:disabled+span::before,
+.pure-material-textfield-outlined>input:disabled+span::after,
+.pure-material-textfield-outlined>textarea:disabled+span::before,
+.pure-material-textfield-outlined>textarea:disabled+span::after {
+    border-top-color: rgba(193, 112, 116, 1) !important;
+}
+
+.pure-material-textfield-outlined>input:disabled:placeholder-shown,
+.pure-material-textfield-outlined>input:disabled:placeholder-shown+span,
+.pure-material-textfield-outlined>textarea:disabled:placeholder-shown,
+.pure-material-textfield-outlined>textarea:disabled:placeholder-shown+span {
+    border-top-color: rgba(193, 112, 116, 1) !important;
+}
+
+.pure-material-textfield-outlined>input:disabled:placeholder-shown+span::before,
+.pure-material-textfield-outlined>input:disabled:placeholder-shown+span::after,
+.pure-material-textfield-outlined>textarea:disabled:placeholder-shown+span::before,
+.pure-material-textfield-outlined>textarea:disabled:placeholder-shown+span::after {
+    border-top-color: transparent !important;
+}
+
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+
+        .pure-material-textfield-outlined>input,
+        .pure-material-textfield-outlined>input+span,
+        .pure-material-textfield-outlined>textarea,
+        .pure-material-textfield-outlined>textarea+span,
+        .pure-material-textfield-outlined>input+span::before,
+        .pure-material-textfield-outlined>input+span::after,
+        .pure-material-textfield-outlined>textarea+span::before,
+        .pure-material-textfield-outlined>textarea+span::after {
+            transition-duration: 0.1s;
+        }
+    }
+}
+
+.pure-material-textfield-outlined :nth-child(2) {
+    color: #C17074 !important;
+    font-weight: 600;
+}
+
+.green-textfield-outlined {
+    position: relative;
+    display: inline-block;
+    padding-top: 6px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Input, Textarea */
+.green-textfield-outlined>input,
+.green-textfield-outlined>textarea {
+    box-sizing: border-box;
+    margin: 0;
+    border: solid 1px;
+    border-color: rgb(195, 198, 218);
+    border-top-color: transparent;
+    border-radius: 4px;
+    padding: 15px 13px 15px;
+    width: 100%;
+    height: inherit;
+    /* background-color: transparent; */
+    background-color: #E8F0FE ;
+    box-shadow: none;
+    /* Firefox */
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    caret-color: rgb(195, 198, 218) !important;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.green-textfield-outlined>input:focus {
+    background: transparent;
+}
+
+/* Span */
+.green-textfield-outlined>input+span,
+.green-textfield-outlined>textarea+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    font-size: 75%;
+    line-height: 15px;
+    cursor: text;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+/* Corners */
+.green-textfield-outlined>input+span::before,
+.green-textfield-outlined>input+span::after,
+.green-textfield-outlined>textarea+span::before,
+.green-textfield-outlined>textarea+span::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border-top: solid 1px;
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 1px transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.green-textfield-outlined>input+span::before,
+.green-textfield-outlined>textarea+span::before {
+    margin-right: 4px;
+    border-left: solid 1px transparent;
+    border-radius: 4px 0;
+}
+
+.green-textfield-outlined>input+span::after,
+.green-textfield-outlined>textarea+span::after {
+    flex-grow: 1;
+    margin-left: 4px;
+    border-right: solid 1px transparent;
+    border-radius: 0 4px;
+}
+
+
+/* Hover */
+.green-textfield-outlined:hover>input,
+.green-textfield-outlined:hover>textarea {
+    border-color: rgb(163, 167, 194);
+    border-top-color: transparent;
+}
+
+.green-textfield-outlined:hover>input+span::before,
+.green-textfield-outlined:hover>textarea+span::before,
+.green-textfield-outlined:hover>input+span::after,
+.green-textfield-outlined:hover>textarea+span::after {
+    border-top-color: rgb(163, 167, 194);
+}
+
+.green-textfield-outlined:hover>input:not(:focus):placeholder-shown,
+.green-textfield-outlined:hover>textarea:not(:focus):placeholder-shown {
+    border-color: rgb(163, 167, 194);
+}
+
+
+/* Placeholder-shown */
+.green-textfield-outlined>input:not(:focus):placeholder-shown,
+.green-textfield-outlined>textarea:not(:focus):placeholder-shown {
+    border-top-color: rgb(53, 103, 60);
+}
+
+.green-textfield-outlined>input:not(:focus):placeholder-shown+span,
+.green-textfield-outlined>textarea:not(:focus):placeholder-shown+span {
+    font-size: inherit;
+    line-height: 68px;
+}
+
+.green-textfield-outlined>input:not(:focus):placeholder-shown+span::before,
+.green-textfield-outlined>textarea:not(:focus):placeholder-shown+span::before,
+.green-textfield-outlined>input:not(:focus):placeholder-shown+span::after,
+.green-textfield-outlined>textarea:not(:focus):placeholder-shown+span::after {
+    border: rgb(53, 103, 60);
+}
+
+/* Focus */
+.green-textfield-outlined>input:focus,
+.green-textfield-outlined>textarea:focus {
+    border-color: rgb(53, 103, 60);
+    border-top-color: transparent;
+    box-shadow: inset 1px 0 rgb(53, 103, 60), inset -1px 0 rgb(53, 103, 60), inset 0 -1px rgb(53, 103, 60);
+    outline: none;
+}
+
+.green-textfield-outlined>input:focus+span,
+.green-textfield-outlined>textarea:focus+span {
+    color: rgb(53, 103, 60);
+}
+
+.green-textfield-outlined>input:focus+span::before,
+.green-textfield-outlined>input:focus+span::after,
+.green-textfield-outlined>textarea:focus+span::before,
+.green-textfield-outlined>textarea:focus+span::after {
+    border-top-color: rgb(53, 103, 60) !important;
+    box-shadow: inset 0 1px rgb(53, 103, 60);
+}
+
+/* Disabled */
+.green-textfield-outlined>input:disabled,
+.green-textfield-outlined>input:disabled+span,
+.green-textfield-outlined>textarea:disabled,
+.green-textfield-outlined>textarea:disabled+span {
+    border-color: rgb(195, 198, 218) !important;
+    border-top-color: transparent !important;
+    color: rgb(195, 198, 218);
+    pointer-events: none;
+}
+
+.green-textfield-outlined>input:disabled+span::before,
+.green-textfield-outlined>input:disabled+span::after,
+.green-textfield-outlined>textarea:disabled+span::before,
+.green-textfield-outlined>textarea:disabled+span::after {
+    border-top-color: rgb(195, 198, 218) !important;
+}
+
+.green-textfield-outlined>input:disabled:placeholder-shown,
+.green-textfield-outlined>input:disabled:placeholder-shown+span,
+.green-textfield-outlined>textarea:disabled:placeholder-shown,
+.green-textfield-outlined>textarea:disabled:placeholder-shown+span {
+    border-top-color: rgb(195, 198, 218) !important;
+}
+
+.green-textfield-outlined>input:disabled:placeholder-shown+span::before,
+.green-textfield-outlined>input:disabled:placeholder-shown+span::after,
+.green-textfield-outlined>textarea:disabled:placeholder-shown+span::before,
+.green-textfield-outlined>textarea:disabled:placeholder-shown+span::after {
+    border-top-color: transparent !important;
+}
+
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+
+        .green-textfield-outlined>input,
+        .green-textfield-outlined>input+span,
+        .green-textfield-outlined>textarea,
+        .green-textfield-outlined>textarea+span,
+        .green-textfield-outlined>input+span::before,
+        .green-textfield-outlined>input+span::after,
+        .green-textfield-outlined>textarea+span::before,
+        .green-textfield-outlined>textarea+span::after {
+            transition-duration: 0.1s;
+        }
+    }
+}
+
+.green-textfield-outlined :nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.green-textfield-outlined :nth-child(2) {
+    color: rgb(195, 198, 218);
+    font-weight: 600;
+}
+
+.create-user-btn-disable {
+    background: rgb(196, 195, 196);
+    border: none;
+    outline: none;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 4px;
+    color: rgb(140, 139, 140);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.create-user-btn-disable:hover {
+    opacity: 0.8;
+}
+
+.create-user-btn {
+    background: rgb(37, 99, 40);
+    border: none;
+    outline: none;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.create-user-btn:hover {
+    background: rgb(19, 82, 23);
+}

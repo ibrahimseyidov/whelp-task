@@ -1,0 +1,59 @@
+.userbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.users :nth-child(1) {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+}
+
+.search-area :nth-child(1) {
+    border: 1px solid #ccc;
+    padding: 9px 12px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 4px;
+    width: 200px;
+    transition: 0.2s all ease;
+    margin-right: 12px;
+}
+
+.search-area :nth-child(1):hover {
+    border: 1px solid #000;
+}
+
+.search-area :nth-child(1):focus {
+    border: 1.5px solid purple;
+}
+
+.create-btn {
+    background: #EA6101;
+    width: 80px;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s all ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.create-btn:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.create-btn:active {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+
+}

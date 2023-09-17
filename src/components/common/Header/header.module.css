@@ -1,0 +1,36 @@
+.header-bg {
+    background-color: #4D2DB7;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 142px;
+}
+
+.user-icon {
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.user-icon :nth-child(1) {
+    width: 35px;
+    background: #F9DBC2;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.active-dot {
+    width: 35px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+.header-head :nth-child(1) {
+    font-size: 34px;
+    color: #fff;
+}

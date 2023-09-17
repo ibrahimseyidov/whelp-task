@@ -1,0 +1,48 @@
+.edit-user-text {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.renew-info-btn {
+    background-color: rgb(226, 93, 2);
+    color: rgb(249, 249, 231);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s all ease;
+}
+
+.deactive-renew-info-btn {
+    background-color: rgb(196, 195, 196);
+    color: rgb(249, 249, 231);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s all ease;
+}
+
+.deactive-renew-info-btn:hover {
+    opacity: 0.8;
+    background-color: rgb(196, 195, 196);
+}
+
+.renew-info-btn:hover {
+    opacity: 0.85;
+    background-color: rgb(226, 93, 2);
+}
+
+.back-btn {
+    margin-top: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(170, 160, 188);
+    height: 45px;
+    color: rgb(114, 52, 129);
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.back-btn:hover {
+    color: #fff;
+    font-size: 15px;
+    background-color: rgb(114, 52, 129);
+}

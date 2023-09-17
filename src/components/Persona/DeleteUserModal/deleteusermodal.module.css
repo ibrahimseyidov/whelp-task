@@ -1,0 +1,78 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.modal-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 450px;
+    height: 200px;
+    border: 3px solid #000;
+    padding: 30px;
+    cursor: auto;
+}
+
+.modal-head {
+    margin-bottom: 42px;
+}
+
+.modal-head :nth-child(1) {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.modal-head :nth-child(2) {
+    font-weight: 500;
+}
+
+.delete-modal-container {
+    display: flex;
+    justify-content: center;
+}
+
+.delete-modal-container :nth-child(1) {
+    margin-right: 24px;
+    background: transparent;
+    border: 1px solid rgb(130,67,141);
+    color: rgb(130,67,141);
+    cursor: pointer;
+    font-weight: 600;
+    width: 70px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.5s all ease;
+}
+
+.delete-modal-container :nth-child(1):hover {
+    background: rgb(130,67,141);
+    color: #fff;
+    font-size: 12px;
+}
+
+.delete-modal-container :nth-child(2) {
+    background: rgb(205,41,41);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    width: 130px;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.5s all ease;
+}
+
+.delete-modal-container :nth-child(2):hover {
+    opacity: 0.85;
+}
